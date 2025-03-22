@@ -1,0 +1,17 @@
+com\plazavea\proyecto\Service\ProductoServiceImpl.class
+com\plazavea\proyecto\Model\Proveedor.class
+com\plazavea\proyecto\Repository\ProductoRepository.class
+com\plazavea\proyecto\Service\ProveedorService.class
+com\plazavea\proyecto\Repository\EmpleadoRepository.class
+com\plazavea\proyecto\Controller\ProveedorController.class
+com\plazavea\proyecto\Repository\ProveedorRepository.class
+com\plazavea\proyecto\Service\ProveedorServiceImpl.class
+com\plazavea\proyecto\Controller\ProductoController.class
+com\plazavea\proyecto\Controller\EmpleadoController.class
+com\plazavea\proyecto\Model\Empleado.class
+com\plazavea\proyecto\ProyectoApplication.class
+com\plazavea\proyecto\Service\EmailService.class
+com\plazavea\proyecto\Service\EmpleadoServiceImpl.class
+com\plazavea\proyecto\Model\Producto.class
+com\plazavea\proyecto\Service\ProductoService.class
+com\plazavea\proyecto\Service\EmpleadoService.class

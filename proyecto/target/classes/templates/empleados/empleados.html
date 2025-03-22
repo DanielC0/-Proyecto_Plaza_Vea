@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleados</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+		integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+
+
+
+
+    <div class="container my-2">
+        <h1>Listado de Empleados</h1>
+        <br>
+        <a th:href="@{/empleado/nuevoEmpleado}" class="btn btn-success btn-sm mb-3">AGREGAR EMPLEADOS</a>
+        <a th:href="@{/producto/nuevoProducto}" class="btn btn-warning btn-sm mb-3">AGREGAR PRODUCTOS</a>
+        <a th:href="@{/proveedor/nuevoProveedor}" class="btn btn-primary btn-sm mb-3">AGREGAR PROVEEDORES</a>
+        <br>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>NOMBRE</th>
+                    <th>APELLIDO</th>
+                    <th>EMAIL</th>
+                    <th>FECHA</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr th:each="empleado: ${listaEmpleados}">
+                    <td th:text="${empleado.getNombre()}"></td>
+                    <td th:text="${empleado.getApellido()}"></td>
+                    <td th:text="${empleado.getEmail()}"></td>
+                    <td th:text="${#dates.format(empleado.getFecha(), 'dd/MM/yyyy')}"></td>
+                    <td> <a th:href="@{/empleado/actualizarEmpleado/{id}(id=${empleado.id})}" class="btn btn-primary">Actualizar</a>
+                        <a th:href="@{/empleado/eliminarEmpleado/{id}(id=${empleado.id})}" class="btn btn-danger">Eliminar</a>
+                   </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        
+
+
+
+    </div>
+
+
+
+
+
+    
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+	integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+	crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+	integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+	crossorigin="anonymous"></script>
+</html>
